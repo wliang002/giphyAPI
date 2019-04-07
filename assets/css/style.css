@@ -1,0 +1,10 @@
+.card {
+    display: inline-block;
+    width: 20%;
+    margin: 10px;
+    text-align: center;
+}
+
+.card-img-top {
+    height: 100px;
+}
