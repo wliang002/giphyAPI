@@ -8,13 +8,13 @@ image-container
 */
 
 $(document).ready(function () {
-    var topics = ["cat", "dog", "bird"];
+    var topics = ["cat", "dog", "bird","dolphin", "monkey"];
 
     // convert array values to buttons and display them 
     function createButtons() {
         $("#button-container").empty();
         for (let i = 0; i < topics.length; i++) {
-            var button = $('<button>').text(topics[i]).addClass('animal btn btn-info');
+            var button = $('<button>').text(topics[i]).addClass('animal btn btn-info').css('margin-right','16px');
             $('#button-container').append(button);
         }
     }
@@ -34,7 +34,7 @@ $(document).ready(function () {
             // check if animal is in the array;
             if (topics.indexOf(newAnimal) === -1) {
                 topics.push(newAnimal);
-                var button = $('<button>').text(newAnimal).addClass('animal btn btn-info');
+                var button = $('<button>').text(newAnimal).addClass('animal btn btn-info').css('margin-right','16px');
                 $('#button-container').append(button);
 
                 $("#search").val("");
@@ -74,7 +74,7 @@ $(document).ready(function () {
                 img.data("still",giffyResult[i].images.original_still.url);
                 img.data("animate", giffyResult[i].images.original.url)
                 var cardBody = $('<div>').addClass('card-body');
-                var rating =$('<h4>').text("rating: "+ giffyResult[i].rating).addClass("card-title");
+                var rating =$('<p>').text("rating: "+ giffyResult[i].rating).addClass("card-title");
                 var title = $('<p>').text(giffyResult[i].title).addClass('card-text');
                 $(card).append(img, cardBody, rating,title);
                 $("#image-container").append(card);

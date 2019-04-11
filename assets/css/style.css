@@ -6,5 +6,16 @@
 }
 
 .card-img-top {
-    height: 100px;
+    height: 200px;
+}
+
+.buttons {
+    margin: 20px;
+    padding: 20px;
+    white-space: normal;
+
+}
+
+body {
+    background-color: Seashell; 
 }
